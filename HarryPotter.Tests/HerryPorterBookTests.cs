@@ -31,5 +31,20 @@ namespace HarryPotter.Tests
 
             result.Should().Be(expected, result.ToString());
         }
+
+        [TestMethod]
+        public void Should_Get_Correct_Price_For_Duplicate_Booklist()
+        {
+            var hpbooks = new HarryPotterBook[]
+                   {
+                       new HarryPotterBook(Series.First, 1),
+                       new HarryPotterBook(Series.Second, 1),
+                       new HarryPotterBook(Series.Second, 1),
+                       new HarryPotterBook(Series.Third, 1),
+                       new HarryPotterBook(Series.Third, 1)
+                   };
+            var result = hpbooks.GetPrice();
+            result.Should().Be(460, result.ToString());
+        }
     }
 }
