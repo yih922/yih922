@@ -73,6 +73,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HarryPotter.Services\HarryPotter.Services.csproj">
+      <Project>{23089cb2-3f98-4f20-b0f5-56330bd1a67d}</Project>
+      <Name>HarryPotter.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
